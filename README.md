@@ -16,10 +16,8 @@ Here is a list of what has been released:
 
 # 💭 Overview
 We introduced AceGPT, an open-source LLM, to address the unique syntactic and cultural characteristics of the Arabic language, including cultural sensitivity and alignment with local values. We proposed a comprehensive solution to address the aforementioned challenges, which includes incremental pre-training using Arabic text, supervised fine-tuning (SFT) with actual Arabic instructions and native GPT-4 responses, and reinforcement learning with human feedback (RLHF) that takes into account local culture and values through a reward model.Our objective is to train a culturally-aware and value-aligned Arabic LLM that caters to the diverse language and application needs of the Arabic-speaking community.
-![](./assets/GrammarGPT.png)
 
-# 📚 Construction of Hybrid Dataset
-
+#📚Data
 
 # 🚀 Training
 ```
@@ -29,6 +27,37 @@ python finetuning.py
 ```
 python generate.py
 ```
+# 👨‍⚕️ Model
+
+## Model Access
+| Model                | Backbone      | Link                                                                          |
+|----------------------|---------------|-------------------------------------------------------------------------------|
+| AceGPT-7B | LlaMA2 | [Model_Weigths](https://huggingface.co/FreedomIntelligence/AceGPT-7B) |
+| AceGPT-13B     | LlaMA2  | [Model Weights](https://huggingface.co/FreedomIntelligence/AceGPT-13B)      |
+| AceGPT-chat-7B | LlaMA2  | [Model_Weigths](https://huggingface.co/FreedomIntelligence/AceGPT-chat-7B) |
+| AceGPT-chat-13B     | LlaMA2  | [Model Weights](https://huggingface.co/FreedomIntelligence/AceGPT-chat-13B)      |
+
+
+Note that due to that HuatuoGPT-13B-delta is a LLaMA based model, we only release the delta of weights. You can download LLaMA-13B weights and use apply_delta.py to convert:
+```bash 
+python apply_delta.py \
+--base-model-path $LLaMA_Base_Path \
+--target-model-path $Save_Path \
+--delta-path $Delta_Path
+```
+
+## Deploy
+
+Firstly, you should install all required packages
+```bash
+pip install -r requirements.txt
+```
+
+Please make sure you have download our model weights and run
+```bash
+python -m huatuo_cli_demo_stream.py --model-name $model_dir
+```
+
 
 # 😀 Acknowledgement
 
