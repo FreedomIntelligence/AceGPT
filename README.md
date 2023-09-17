@@ -18,7 +18,8 @@ Here is a list of what has been released:
 We introduced AceGPT, an open-source LLM, to address the unique syntactic and cultural characteristics of the Arabic language, including cultural sensitivity and alignment with local values. We proposed a comprehensive solution to address the aforementioned challenges, which includes incremental pre-training using Arabic text, supervised fine-tuning (SFT) with actual Arabic instructions and native GPT-4 responses, and reinforcement learning with human feedback (RLHF) that takes into account local culture and values through a reward model.Our objective is to train a culturally-aware and value-aligned Arabic LLM that caters to the diverse language and application needs of the Arabic-speaking community.
 
 #📚Data
-
+## Benchmark Datsets
+We released benchmark datasets in [benchmark questions]()
 # 🚀 Training
 ```
 python finetuning.py
