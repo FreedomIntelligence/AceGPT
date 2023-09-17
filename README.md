@@ -38,25 +38,6 @@ python generate.py
 | AceGPT-chat-13B     | LlaMA2  | [Model Weights](https://huggingface.co/FreedomIntelligence/AceGPT-chat-13B)      |
 
 
-Note that due to that HuatuoGPT-13B-delta is a LLaMA based model, we only release the delta of weights. You can download LLaMA-13B weights and use apply_delta.py to convert:
-```bash 
-python apply_delta.py \
---base-model-path $LLaMA_Base_Path \
---target-model-path $Save_Path \
---delta-path $Delta_Path
-```
-
-## Deploy
-
-Firstly, you should install all required packages
-```bash
-pip install -r requirements.txt
-```
-
-Please make sure you have download our model weights and run
-```bash
-python -m huatuo_cli_demo_stream.py --model-name $model_dir
-```
 
 
 # 😀 Acknowledgement
@@ -73,22 +54,19 @@ Without these, nothing could happen in this repository.
 # Citation
 ```
 @misc{fan2023grammargpt,
-      title={GrammarGPT: Exploring Open-Source LLMs for Native Chinese Grammatical Error Correction with Supervised Fine-Tuning}, 
-      author={Yaxin Fan and Feng Jiang and Peifeng Li and Haizhou Li},
+      title={AceGPT: Aligning Large Language Models with Local (Arabic) Values}, 
+      author={},
       year={2023},
-      eprint={2307.13923},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+      eprint={},
+      archivePrefix={},
+      primaryClass={}
 }
 ```
 We are from the School of Data Science, the Chinese University of Hong Kong, Shenzhen (CUHKSZ), and the Shenzhen Research Institute of Big Data (SRIBD).
-
-The first author is a visiting student from Soochow University, and we welcome aspiring individuals to join our group and contribute to the new era of LLM.
-
 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=FreedomIntelligence/GrammarGPT&type=Date&theme=dark" />
   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=FreedomIntelligence/GrammarGPT&type=Date" />
-  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=FreedomIntelligence/GrammarGPT&type=Date" />
+  <img alt="Star History Chart" src="" />
 </picture>
