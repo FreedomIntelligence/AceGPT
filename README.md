@@ -25,7 +25,7 @@ We introduced AceGPT, an open-source LLM, to address the unique syntactic and cu
 * About ALUE, you can check [ALUE](https://www.alue.org/tasks) to get questions. 
 
  
-* We have also released our results on benchmark datasets,you can check  [results](https://github.com/FreedomIntelligence/AceGPT/tree/main/eval_results)  if needed.  
+* We have also released our results on benchmark datasets, you can check  [results](https://github.com/FreedomIntelligence/AceGPT/tree/main/eval_results) if needed.  
 
 # 🚀 Training
 ```
