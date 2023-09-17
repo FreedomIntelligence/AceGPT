@@ -19,7 +19,8 @@ We introduced AceGPT, an open-source LLM, to address the unique syntactic and cu
 
 #📚Data
 ## Benchmark Datsets
-We released benchmark datasets in [benchmark questions]()
+We released benchmark datasets in [benchmark questions](https://github.com/FreedomIntelligence/AceGPT/tree/main/question)  
+We have also released our results on benchmark datasets,you can check  [results](https://github.com/FreedomIntelligence/AceGPT/tree/main/eval_results)if needed.
 # 🚀 Training
 ```
 python finetuning.py
