@@ -7,10 +7,10 @@
 
 Welcome to the repository of AceGPT.
 
-AceGPT achieved top performance among open-source Arabic language models in benchmark tests such as `Arabic Vicuna-80`, `Arabic MMLU`, `EXAMs`, `AlpacaEval` and our newly proposed benchmark `Arabic cultural&value alignment`.
+AceGPT achieved top performance among open-source Arabic language models in benchmark tests such as `Arabic Vicuna-80`, `Arabic MMLU`, `EXAMs`, `AlpacaEval` and our newly proposed benchmark `Arabic cultural&value`.
 
 Here is a list of what has been released:
-* The datasets we used for benchmark testing which was processed by ourselves, including`Arabic Vicuna-80`, `Arabic MMLU`, `EXAMs `, `AlpacaEval` and `Arabic cultural&valuealignment`.
+* The datasets we used for benchmark testing which was processed by ourselves, including`Arabic Vicuna-80`, `Arabic MMLU`, `EXAMs `, `AlpacaEval` and `Arabic cultural&value`.
 * The code for training and inferencing.
 * The models we have trained, including AceGPT-7B, AceGPT-13B, AceGPT-chat-7B, AceGPT-chat-13B.
 
