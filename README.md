@@ -12,7 +12,7 @@ AceGPT achieved top performance among open-source Arabic language models in benc
 Here is a list of what has been released:
 * All the data we used for benchmark testing, including Vicuna, Arabic MMLU, EXAMs and Arabic Culture.
 * The code for training and inferencing.
-* The model we have trained, including AceGPT-7B, AceGPT-13B, AceGPT-chat-7B, AceGPT-chat-13B.
+* The models we have trained, including AceGPT-7B, AceGPT-13B, AceGPT-chat-7B, AceGPT-chat-13B.
 
 # 💭 Overview
 We introduced AceGPT, an open-source LLM, to address the unique syntactic and cultural characteristics of the Arabic language, including cultural sensitivity and alignment with local values. We proposed a comprehensive solution to address the aforementioned challenges, which includes incremental pre-training using Arabic text, supervised fine-tuning (SFT) with actual Arabic instructions and native GPT-4 responses, and reinforcement learning with human feedback (RLHF) that takes into account local culture and values through a reward model.Our objective is to train a culturally-aware and value-aligned Arabic LLM that caters to the diverse language and application needs of the Arabic-speaking community.
