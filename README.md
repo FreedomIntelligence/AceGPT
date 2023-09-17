@@ -19,7 +19,7 @@ We introduced AceGPT, an open-source LLM, to address the unique syntactic and cu
 
 #📚Data
 ## Benchmark Datsets
-* We released benchmark datasets in [benchmark questions](https://github.com/FreedomIntelligence/AceGPT/tree/main/question) .  
+* We released benchmark datasets in [benchmark questions](https://github.com/FreedomIntelligence/AceGPT/tree/main/eval) .  
 
   
 * About ALUE, you can check [ALUE](https://www.alue.org/tasks) to get questions. 
