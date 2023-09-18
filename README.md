@@ -72,9 +72,12 @@ Without these, nothing could happen in this repository.
 ```
 We are from the School of Data Science, the Chinese University of Hong Kong, Shenzhen (CUHKSZ), and the Shenzhen Research Institute of Big Data (SRIBD).
 
+<!-- 这是一个注释，它在渲染的Markdown中不会显示。
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=FreedomIntelligence/GrammarGPT&type=Date&theme=dark" />
   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=FreedomIntelligence/GrammarGPT&type=Date" />
   <img alt="Star History Chart" src="" />
 </picture>
+
+-->
