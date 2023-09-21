@@ -66,7 +66,7 @@ Without these, nothing could happen in this repository.
 
 # Citation
 ```
-@misc{fan2023grammargpt,
+@misc{Huang2023acegpt,
       title={AceGPT: Aligning Large Language Models with Local (Arabic) Values}, 
       author={},
       year={2023},
