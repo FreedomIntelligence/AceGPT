@@ -17,7 +17,7 @@ Here is a list of what has been released:
 # 💭 Overview
 In this paper, we present AceGPT, an open-source Large Language Model (LLM) tailored for the Arabic language. AceGPT not only addresses the unique syntactic intricacies of Arabic but also ensures cultural sensitivity and alignment with local values. Our methodology encompasses incremental pre-training on Arabic texts, supervised fine-tuning (SFT) using genuine Arabic instructions paired with native GPT-4 responses, and a novel reinforcement learning approach termed Reinforcement Learning with AI Feedback (RLAIF). This last method incorporates a reward model sensitive to local culture and values. Ultimately, our aim is to deliver an Arabic LLM that is both culturally-aware and value-aligned, adeptly serving the diverse linguistic and practical needs of the Arabic-speaking community.
 
-#📚Data
+# 📚Data
 ## Benchmark Datsets
 * We released benchmark datasets in [eval](https://github.com/FreedomIntelligence/AceGPT/tree/main/eval) .  
 
