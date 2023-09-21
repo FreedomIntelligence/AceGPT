@@ -75,7 +75,7 @@ Without these, nothing could happen in this repository.
       primaryClass={}
 }
 ```
-We are from the School of Data Science, the Chinese University of Hong Kong, Shenzhen (CUHKSZ), and the Shenzhen Research Institute of Big Data (SRIBD) .
+We are from the School of Data Science, the Chinese University of Hong Kong, Shenzhen (CUHKSZ), the Shenzhen Research Institute of Big Data (SRIBD), and the King Abdullah University of Science and Technology (KAUST).
 
 
 
