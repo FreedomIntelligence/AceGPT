@@ -27,14 +27,6 @@ In this paper, we present AceGPT, an open-source Large Language Model (LLM) tail
  
 * We have also released our results on benchmark datasets, you can check  [eval_results](https://github.com/FreedomIntelligence/AceGPT/tree/main/eval_results) if needed.  
 
-# 🚀 Training
-```
-python finetuning.py
-```
-# 🧐 Inferencing
-```
-python generate.py
-```
 # 👨‍⚕️ Model
 
 ## Model Access
@@ -46,7 +38,19 @@ python generate.py
 | AceGPT-13B-chat     | LlaMA2  | [Model Weights](https://huggingface.co/FreedomIntelligence/AceGPT-13B-chat)      |
 
 
+##🧐Deploy
 
+Firstly, you should install all required packages
+```bash
+pip install -r requirements.txt
+```
+
+Please make sure you have download our model weights and run
+```bash
+python -m web_demo_stream.py --model-name $model_dir
+```
+# 🤖 Limitations
+Our model is primarily designed and trained to function as an AI assistant tailored for Arabic speakers. This specific design focus means that while it is optimized for generating responses to queries in Arabic, it may not produce satisfactory results for queries in other languages. Furthermore, while we have made significant advancements in the model's capabilities, it is essential to recognize its potential pitfalls. These include possible misuses, such as mishandling sensitive information, producing harmful content, perpetuating misinformation, or failing in safety checks. We have not conducted an exhaustive safety checking on the model, so users should exercise caution. We cannot overemphasize the need for responsible and judicious use of our model. Moreover, our evaluations predominantly relied on open-source data and the data we crafted. To achieve a more robust and comprehensive assessment, and to bolster the credibility of our findings, constructing an expansive evaluation set is imperative.
 
 # 😀 Acknowledgement
 
@@ -71,7 +75,7 @@ Without these, nothing could happen in this repository.
       primaryClass={}
 }
 ```
-We are from the School of Data Science, the Chinese University of Hong Kong, Shenzhen (CUHKSZ), and the Shenzhen Research Institute of Big Data (SRIBD).
+We are from the School of Data Science, the Chinese University of Hong Kong, Shenzhen (CUHKSZ), and the Shenzhen Research Institute of Big Data (SRIBD) .
 
 
 
