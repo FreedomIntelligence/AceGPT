@@ -129,7 +129,7 @@ def main(args):
                 yield partial_message
 
     
-    gr.ChatInterface(get_llama_response).queue().launch(share=True)
+    gr.ChatInterface(get_llama_response, chatbot=gr.Chatbot(rtl=True)).queue().launch(share=True)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
