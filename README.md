@@ -7,15 +7,15 @@
 
 Welcome to the repository of AceGPT.
 
-AceGPT achieved top performance among open-source Arabic language models in benchmark tests such as `Arabic Vicuna-80`, `Arabic MMLU`, `EXAMs`, `AlpacaEval` and our newly proposed benchmark `Arabic cultural&value`.
+AceGPT achieved top performance among open-source Arabic language models in benchmark tests such as `Arabic Vicuna-80`, `Arabic AlpacaEval`, `Arabic MMLU`, `EXAMs` and our newly proposed benchmark `Arabic Cultural&Value Alignment`.
 
 Here is a list of what has been released:
-* The datasets we used for benchmark testing which was processed by ourselves, including`Arabic Vicuna-80`, `Arabic MMLU`, `EXAMs `, `AlpacaEval` and `Arabic cultural&value`.
+* The datasets we used for benchmark testing which was processed by ourselves, including`Arabic Vicuna-80`, `Arabic AlpacaEval`, `Arabic MMLU`, `EXAMs ` and `Arabic Cultural&Value Alignment`.
 * The code for training and inferencing.
-* The models we have trained, including AceGPT-7B, AceGPT-13B, AceGPT-chat-7B, AceGPT-chat-13B.
+* The models we have trained, including AceGPT-7B, AceGPT-13B, AceGPT-7B-chat, AceGPT-13B-chat.
 
 # 💭 Overview
-We introduced AceGPT, an open-source LLM, to address the unique syntactic and cultural characteristics of the Arabic language, including cultural sensitivity and alignment with local values. We proposed a comprehensive solution to address the aforementioned challenges, which includes incremental pre-training using Arabic text, supervised fine-tuning (SFT) with actual Arabic instructions and native GPT-4 responses, and reinforcement learning with human feedback (RLHF) that takes into account local culture and values through a reward model.Our objective is to train a culturally-aware and value-aligned Arabic LLM that caters to the diverse language and application needs of the Arabic-speaking community.
+In this paper, we present AceGPT, an open-source Large Language Model (LLM) tailored for the Arabic language. AceGPT not only addresses the unique syntactic intricacies of Arabic but also ensures cultural sensitivity and alignment with local values. Our methodology encompasses incremental pre-training on Arabic texts, supervised fine-tuning (SFT) using genuine Arabic instructions paired with native GPT-4 responses, and a novel reinforcement learning approach termed Reinforcement Learning with AI Feedback (RLAIF). This last method incorporates a reward model sensitive to local culture and values. Ultimately, our aim is to deliver an Arabic LLM that is both culturally-aware and value-aligned, adeptly serving the diverse linguistic and practical needs of the Arabic-speaking community.
 
 #📚Data
 ## Benchmark Datsets
@@ -42,8 +42,8 @@ python generate.py
 |----------------------|---------------|-------------------------------------------------------------------------------|
 | AceGPT-7B | LlaMA2 | [Model_Weigths](https://huggingface.co/FreedomIntelligence/AceGPT-7B) |
 | AceGPT-13B     | LlaMA2  | [Model Weights](https://huggingface.co/FreedomIntelligence/AceGPT-13B)      |
-| AceGPT-chat-7B | LlaMA2  | [Model_Weigths](https://huggingface.co/FreedomIntelligence/AceGPT-chat-7B) |
-| AceGPT-chat-13B     | LlaMA2  | [Model Weights](https://huggingface.co/FreedomIntelligence/AceGPT-chat-13B)      |
+| AceGPT-7B-chat | LlaMA2  | [Model_Weigths](https://huggingface.co/FreedomIntelligence/AceGPT-7B-chat) |
+| AceGPT-13B-chat     | LlaMA2  | [Model Weights](https://huggingface.co/FreedomIntelligence/AceGPT-13B-chat)      |
 
 
 
