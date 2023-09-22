@@ -133,7 +133,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-name", type=str, default="FreedomIntelligence/AceGPT-chat-7B")
+    parser.add_argument("--model-name", type=str, default="FreedomIntelligence/AceGPT-7B-chat")
     parser.add_argument("--device", type=str, choices=["cuda", "cpu"], default="cuda")
     parser.add_argument("--num-gpus", type=str, default="1")
     parser.add_argument("--precise", type=str, choices=["fp16", "int8"], default="fp16")
