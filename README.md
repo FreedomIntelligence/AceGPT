@@ -36,6 +36,8 @@ In this paper, we present AceGPT, an open-source Large Language Model (LLM) tail
 | AceGPT-13B     | LlaMA2  | [Model Weights](https://huggingface.co/FreedomIntelligence/AceGPT-13B)      |
 | AceGPT-7B-chat | LlaMA2  | [Model_Weigths](https://huggingface.co/FreedomIntelligence/AceGPT-7B-chat) |
 | AceGPT-13B-chat     | LlaMA2  | [Model Weights](https://huggingface.co/FreedomIntelligence/AceGPT-13B-chat)      |
+|AceGPT-7B-chat-int4|LlaMA2|TODO|
+|AceGPT-13B-chat-int4|LlaMA2|TODO|
 
 
 ## 🧐Deploy
@@ -45,9 +47,11 @@ Firstly, you should install all required packages
 pip install -r requirements.txt
 ```
 
-Please make sure you have download our model weights and run
+<!--To use the int4-quanted model, please refer to the following link: xx.   -->
+
+For all base and chat models, you can proceed by running the following command:
 ```bash
-python -m web_demo_stream.py --model-name $model_dir
+python -m web_demo.py --model-name $model_dir
 ```
 # 🤖 Limitations
 Our model is primarily designed and trained to function as an AI assistant tailored for Arabic speakers. This specific design focus means that while it is optimized for generating responses to queries in Arabic, it may not produce satisfactory results for queries in other languages. Furthermore, while we have made significant advancements in the model's capabilities, it is essential to recognize its potential pitfalls. These include possible misuse, such as mishandling sensitive information, producing harmful content, perpetuating misinformation, or failing safety checks. We have not conducted an exhaustive safety check on the model, so users should exercise caution. We cannot overemphasize the need for responsible and judicious use of our model. Moreover, our evaluations predominantly relied on open-source data and the data we crafted. To achieve a more robust and comprehensive assessment, and to bolster the credibility of our findings, constructing an expansive evaluation set is imperative.
@@ -66,13 +70,13 @@ Without these, nothing could happen in this repository.
 
 # Citation
 ```
-@misc{Huang2023acegpt,
-      title={AceGPT: Aligning Large Language Models with Local (Arabic) Values}, 
-      author={},
+@misc{huang2023acegpt,
+      title={AceGPT, Localizing Large Language Models in Arabic}, 
+      author={Huang Huang and Fei Yu and Jianqing Zhu and Xuening Sun and Hao Cheng and Dingjie Song and Zhihong Chen and Abdulmohsen Alharthi and Bang An and Ziche Liu and Zhiyi Zhang and Junying Chen and Jianquan Li and Benyou Wang and Lian Zhang and Ruoyu Sun and Xiang Wan and Haizhou Li and Jinchao Xu},
       year={2023},
-      eprint={},
-      archivePrefix={},
-      primaryClass={}
+      eprint={2309.12053},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }
 ```
 We are from the School of Data Science, the Chinese University of Hong Kong, Shenzhen (CUHKSZ), the Shenzhen Research Institute of Big Data (SRIBD), and the King Abdullah University of Science and Technology (KAUST).
