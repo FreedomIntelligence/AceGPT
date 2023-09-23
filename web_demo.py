@@ -100,7 +100,7 @@ def main(args):
         """
 
         temperature=0.5
-        max_new_tokens = 512
+        max_new_tokens = 768
         content_len = 2048
         stop = StopOnTokens()
         max_src_len = content_len-max_new_tokens-8
