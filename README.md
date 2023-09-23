@@ -36,8 +36,8 @@ In this paper, we present AceGPT, an open-source Large Language Model (LLM) tail
 | AceGPT-13B     | LlaMA2  | [Model Weights](https://huggingface.co/FreedomIntelligence/AceGPT-13B)      |
 | AceGPT-7B-chat | LlaMA2  | [Model_Weigths](https://huggingface.co/FreedomIntelligence/AceGPT-7B-chat) |
 | AceGPT-13B-chat     | LlaMA2  | [Model Weights](https://huggingface.co/FreedomIntelligence/AceGPT-13B-chat)      |
-|AceGPT-7B-chat-int4|LlaMA2|TODO|
-|AceGPT-13B-chat-int4|LlaMA2|TODO|
+|AceGPT-7B-chat-int4|LlaMA2| [Model Weights](https://huggingface.co/FreedomIntelligence/AceGPT-7b-chat-GPTQ) |
+
 
 
 ## 🧐Deploy
@@ -47,7 +47,7 @@ Firstly, you should install all required packages
 pip install -r requirements.txt
 ```
 
-<!--To use the int4-quanted model, please refer to the following link: xx.   -->
+To use the int4-quanted model, please refer to the [Ace-GPT-7B-Chat-int4](https://huggingface.co/FreedomIntelligence/AceGPT-7b-chat-GPTQ). But the performance of the int4 version has experienced some degradation, for a better user experience, please use the fp16 version.
 
 For all base and chat models, you can proceed by running the following command:
 ```bash
