@@ -1,0 +1,50 @@
+This project utilizes materials from Llama 2, provided by Meta Platforms, Inc. The Llama 2 materials are licensed under the LLAMA 2 Community License, Copyright (c) Meta Platforms, Inc. All Rights Reserved.
+
+A copy of the license agreement can be found at [Link to the License, e.g. https://github.com/facebookresearch/llama/blob/main/LICENSE].
+
+All applicable terms and conditions outlined in the LLAMA 2 Community License Agreement have been adhered to, including but not limited to the retention of the attribution notice in all redistributed copies of the Llama Materials as follows:
+
+"Llama 2 is licensed under the LLAMA 2 Community License, Copyright (c) Meta Platforms, Inc. All Rights Reserved."
+
+This project complies with all applicable laws and regulations and adheres to the Acceptable Use Policy for the Llama Materials.
+
+
+AceGPT COMMUNITY LICENSE AGREEMENT	
+AceGPT Version Release Date: Sep 23, 2023
+
+
+"Agreement" means the terms and conditions for use, reproduction, distribution and modification of the AceGPT Materials set forth herein.
+
+"Licensee" or "you" means you, or your employer or any other person or entity (if you are entering into this Agreement on such person or entity's behalf), of the age required under applicable laws, rules or regulations to provide legal consent and that has legal authority to bind your employer or such other person or entity if you are entering in this Agreement on their behalf.
+
+"AceGPT" means the foundational large language models and software and algorithms, including machine-learning model code, trained model weights, inference-enabling code, training-enabling code, fine-tuning enabling code and other elements of the foregoing distributed by SRIBD, CUHK(shenzhen) and KAUST at https://github.com/FreedomIntelligence/AceGPT and https://huggingface.co/FreedomIntelligence/.
+
+"AceGPT Materials" means, collectively, our proprietary AceGPT and 
+Documentation (and any portion thereof) made available under this Agreement.
+
+By clicking "I Accept" below or by using or distributing any portion or element of our Materials, you agree to be bound by this Agreement.
+
+1. License Rights and Redistribution. 
+
+      a. Grant of Rights. You are granted a non-exclusive, worldwide, non-transferable and royalty-free limited license under our intellectual property or other rights owned by our embodied in the AceGPT Materials to use, reproduce, distribute, copy, create derivative works of, and make modifications to the AceGPT Materials.  
+      
+      b. Redistribution and Use.  
+
+            i. If you distribute or make the AceGPT Materials, or any derivative works thereof, available to a third party, you shall provide a copy of this Agreement to such third party. 
+            ii.  If you receive AceGPT Materials, or any derivative works thereof, from a Licensee as part of an integrated end user product, then Section 2 of this Agreement will not apply to you. 
+
+            iii. You must retain in all copies of the AceGPT Materials that you distribute the following attribution notice within a "Notice" text file distributed as a part of such copies: "AceGPT is licensed under the AceGPT Community License"
+
+            iv. Your use of the AceGPT Materials must comply with applicable laws and regulations (including trade compliance laws and regulations) and adhere to the Acceptable Use Policy for the AceGPT Materials, which is hereby incorporated by reference into this Agreement.
+
+            v. You will not use the AceGPT Materials or any output or results of the AceGPT Materials to improve any other large language model (excluding AceGPT or derivative works thereof).  
+
+2. Additional Commercial Terms. If, on the AceGPT version release date, the monthly active users of the products or services made available by or for Licensee, or Licensee's affiliates, is greater than 700 million monthly active users in the preceding calendar month, you must request a license from SRIBD, which SRIBD may grant to you in its sole discretion, and you are not authorized to exercise any of the rights under this Agreement unless or until SRIBD otherwise expressly grants you such rights.
+            
+3. Disclaimer of Warranty. UNLESS REQUIRED BY APPLICABLE LAW, THE ACEGPT MATERIALS AND ANY OUTPUT AND RESULTS THEREFROM ARE PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. YOU ARE SOLELY RESPONSIBLE FOR DETERMINING THE APPROPRIATENESS OF USING OR REDISTRIBUTING THE ACEGPT MATERIALS AND ASSUME ANY RISKS ASSOCIATED WITH YOUR USE OF THE ACEGPT MATERIALS AND ANY OUTPUT AND RESULTS.
+
+4. Limitation of Liability. IN NO EVENT WILL SRIBD OR ITS AFFILIATES BE LIABLE UNDER ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, TORT, NEGLIGENCE, PRODUCTS LIABILITY, OR OTHERWISE, ARISING OUT OF THIS AGREEMENT, FOR ANY LOST PROFITS OR ANY INDIRECT, SPECIAL, CONSEQUENTIAL, INCIDENTAL, EXEMPLARY OR PUNITIVE DAMAGES, EVEN IF SRIBD OR ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF ANY OF THE FOREGOING.
+ 
+5. Intellectual Property.
+
+      a. No trademark licenses are granted under this Agreement, and in connection with the AceGPT Materials, neither SRIBD nor Licensee may use any name or m
