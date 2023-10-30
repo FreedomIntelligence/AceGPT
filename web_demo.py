@@ -100,7 +100,7 @@ def main(args):
         """
 
         temperature=0.5
-        max_new_tokens = 512
+        max_new_tokens = 768
         content_len = 2048
         stop = StopOnTokens()
         max_src_len = content_len-max_new_tokens-8
@@ -129,11 +129,11 @@ def main(args):
                 yield partial_message
 
     
-    gr.ChatInterface(get_llama_response).queue().launch(share=True)
+    gr.ChatInterface(get_llama_response, chatbot=gr.Chatbot(rtl=True)).queue().launch(share=True)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-name", type=str, default="FreedomIntelligence/AceGPT-chat-7B")
+    parser.add_argument("--model-name", type=str, default="FreedomIntelligence/AceGPT-7B-chat")
     parser.add_argument("--device", type=str, choices=["cuda", "cpu"], default="cuda")
     parser.add_argument("--num-gpus", type=str, default="1")
     parser.add_argument("--precise", type=str, choices=["fp16", "int8"], default="fp16")
