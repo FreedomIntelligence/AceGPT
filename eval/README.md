@@ -21,7 +21,7 @@ To evaluate, for example, the EXAMS dataset, run the following script:
 
 `sh script/EXAMS_few_shot_7b.sh`
 
-the ArabicMMLU dataset, run the following script:
+the MMLUArabic dataset, run the following script:
 
 `sh script/MMLUArabic_few_shot_7b.sh`
 
