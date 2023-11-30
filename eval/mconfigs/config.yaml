@@ -1,0 +1,13 @@
+acegpt:
+    AceGPT-7B-base:
+        config_dir: <Your model path>  # Change this to your model's path
+        prompt: "{question}"
+        stage: 1
+        precision: 'fp16'
+
+    AceGPT-7B-chat:
+        config_dir: <Your model path>  # Change this to your model's path
+        prompt: "[INST] <<SYS>>\nأنت مساعد مفيد ومحترم وصادق. أجب دائما بأكبر قدر ممكن من المساعدة بينما تكون آمنا.  يجب ألا تتضمن إجاباتك أي محتوى ضار أو غير أخلاقي أو عنصري أو جنسي أو سام أو خطير أو غير قانوني. يرجى التأكد من أن ردودك غير متحيزة اجتماعيا وإيجابية بطبيعتها.\n\nإذا كان السؤال لا معنى له أو لم يكن متماسكا من الناحية الواقعية، اشرح السبب بدلا من الإجابة على شيء غير صحيح. إذا كنت لا تعرف إجابة سؤال ما، فيرجى عدم مشاركة معلومات خاطئة.\n<</SYS>>\n\n{question} [/INST]"
+        stage: 3
+        precision: 'fp16'
+

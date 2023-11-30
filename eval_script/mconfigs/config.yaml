@@ -1,7 +1,0 @@
-acegpt:
-    AceGPT-7B-base:
-        config_dir: /mntcephfs/lab_data/chenjunying/zhujianqing/llm_train/llama-SRIBD-pretrain-raw/llama-7b-continue1.1-data_v4/checkpoint-0-430000/tfmr32
-        prompt: "{question}"
-        stage: 1
-        precision: 'fp16'
-

@@ -5,3 +5,4 @@ tokenizers==0.13.1
 sentencepiece
 gradio
 accelerate
+omegaconf
