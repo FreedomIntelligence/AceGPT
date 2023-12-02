@@ -1,8 +1,7 @@
 # AceGPT:  Aligning Large Language Models with Local (Arabic) Values
 
 # ✨ Latest News
-
-
+* update AceGPT models on hugging face.(2023.12.02)
 # ⚡ Introduction
 
 Welcome to the repository of AceGPT.
