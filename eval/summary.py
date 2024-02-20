@@ -4,12 +4,13 @@ import collections
 
 """MMLU score"""
 def get_average_score_for_categories_new(data):
-    results = collections.defaultDict(int)
+    results = collections.defaultdict(int)
     
     for category, subcategories in data.items():
+
         for subcategory, values in subcategories.items():
           results[category] += values["average"]["Accuracy"]
-    results[category] /= len(subcategories)        
+        results[category] /= len(subcategories)
     score = np.mean([average for category, average in results.items()])
     for category, average in results.items():
       print(f"{category}: {average:.2%}")
