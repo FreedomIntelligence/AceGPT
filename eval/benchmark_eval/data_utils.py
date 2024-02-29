@@ -317,6 +317,96 @@ class EXAMSBenchmark(BenchmarkBase):
             few_shot_prompt_dict[c] += "{test_question}\nإجابة:" 
 
         return few_shot_prompt_dict
+        
+
+class ArabicCultureBenchmark(BenchmarkBase):
+
+    subtasks = ['Arabic Funeral', 'Sudan', 'Arabic Physics and Chemistry', 'Algeria', 'InfluenceFromAncientEgypt', 'Arabic Ceremony', 'Arabic Astronomy', 'Arabic Calligraphy', 'daily life', 'Saudi Arabia', 'Arabic Language Origin', 'Arabic Ornament', 'Islamic law system', 'Kuwait', 'InfluenceFromChina', 'Arabic Literature', 'computer and phone', 'Tunisia', 'Arabic Geography', 'Arabic Music', 'Arabic Medicine', 'Arabic Philosophy', 'Yemen', 'Jordan', 'Mesopotamia civilization', 'Islam Education', 'Arabic Wedding', 'InfluenceFromRome', 'Egypt modern', 'Ancient Egypt', 'Comoros', 'InfluenceFromGreece', 'Qatar', 'InfluenceFromPersia', 'Lebanon', 'Arabic Math', 'Arabic History', 'InfluenceFromIslam', 'Libya', 'Syria', 'Oman', 'Arabic Culture', 'Arabic Art', 'United Arab Emirates', 'Islam branches and schools', 'InfluenceFromByzantium', 'Arab Empire', 'Arabic Food', 'Mauritania', 'entertainment', 'communication', 'Palestine', 'Bahrain', 'Somalia', 'Iraq', 'Arabic Clothing', 'Arabic Architecture', 'Morocco',
+                ]
+    subtasks_ar = ['جنازة عربية', 'السودان', 'الفيزياء والكيمياء ', 'الجزائر', 'التأثير من مصر القديمة', 'المراسم العربية', 'الفلك العربي', 'الخط العربي', 'الحياة اليومية', 'المملكة العربية السعودية', 'أصل اللغة العربية', 'الزخرفة العربية', 'نظام القانون الإسلامي', 'الكويت', 'التأثير من الصين', 'الأدب العربي', 'الكمبيوتر والهاتف', 'تونس', 'الجغرافيا العربية', 'الموسيقى العربية', 'الطب العربي', 'الفلسفة العربية', 'اليمن', 'الأردن', 'حضارة بلاد الرافدين', 'التعليم الإسلامي', 'الزفاف العربي', 'التأثير من روما', 'مصر الحديثة', 'مصر القديمة', 'جزر القمر', 'التأثير من اليونان', 'قطر', 'التأثير من بلاد فارس', 'لبنان', 'الرياضيات ', 'التاريخ العربي', 'التأثير من الإسلام', 'ليبيا', 'سوريا', 'عمان', 'الثقافة العربية', 'الفن العربي', 'الإمارات العربية المتحدة', 'فروع الإسلام والمذاهب', 'التأثير من البيزنطيين', 'الإمبراطورية العربية', 'الطعام العربي', 'موريتانيا', 'الترفيه', 'الاتصالات', 'فلسطين', 'البحرين', 'الصومال', 'العراق', 'الملابس العربية', 'العمارة العربية', 'المغرب', 'المحادثات', 'المهرجانات التقليدية', 'الحياة', 'التعبيرات الخاصة', 'الإسلام', 'السفر', 'التجارة والأعمال']
+    difficulty_levels = {
+        'easy': ['Arabic Funeral', 'Sudan', 'Arabic Physics and Chemistry', 'Algeria', 'InfluenceFromAncientEgypt', 'Arabic Ceremony', 'Arabic Astronomy', 'Arabic Calligraphy', 'daily life', 'Saudi Arabia', 'Arabic Language Origin', 'Arabic Ornament', 'Islamic law system', 'Kuwait', 'InfluenceFromChina', 'Arabic Literature', 'computer and phone', 'Tunisia', 'Arabic Geography', 'Arabic Music', 'Arabic Medicine', 'Arabic Philosophy', 'Yemen', 'Jordan', 'Mesopotamia civilization', 'Islam Education', 'Arabic Wedding', 'InfluenceFromRome', 'Egypt modern', 'Ancient Egypt', 'Comoros', 'InfluenceFromGreece', 'Qatar', 'InfluenceFromPersia', 'Lebanon', 'Arabic Math', 'Arabic History', 'InfluenceFromIslam', 'Libya', 'Syria', 'Oman', 'Arabic Culture', 'Arabic Art', 'United Arab Emirates', 'Islam branches and schools', 'InfluenceFromByzantium', 'Arab Empire', 'Arabic Food', 'Mauritania', 'entertainment', 'communication', 'Palestine', 'Bahrain', 'Somalia', 'Iraq', 'Arabic Clothing', 'Arabic Architecture', 'Morocco'],
+        
+    }
+
+    task_types = {
+        'TF': difficulty_levels['easy'],
+    }
+
+    def __init__(self):
+        super(ArabicCultureBenchmark, self).__init__(benchmark_name='ArabicCulture')
+
+    def _init_task_prompts(self):
+        """
+        Config self.task_prompt_zero_shot and self.task_prompt_few_shot
+        """
+
+        self.task_prompt_zero_shot = {
+            task: (
+              "الرجاء التحكم في ما إذا كانت الجملة التالية صحيحة أم لا. إذا كانت صحيحة، فالرجاء الرد بـ 'نعم'. إذا كانت غير صحيحة، فالرجاء الرد بـ 'لا'."  + '\n\n{input}\n'
+            )
+            for i, task in enumerate(self.subtasks) if task in self.task_types['TF']
+        }
+
+
+        self.response_with_zero_shot = '\nإجابة:'
+
+
+        self.task_prompt_few_shot = {
+            task: (
+                   "فيما يلي أسئلة نعم أو لا (مع الإجابات) حول %s\n\n{input}" % self.subtasks_ar[i].lower() # TODO
+            )
+            for i, task in enumerate(self.subtasks) if task in self.task_types['TF']
+        }
+
+    def _prepare_data(self) -> Dict[str, List[dict]]:
+        easy_file = os.path.join(self.benchmark_dir, 'difficulty-easy-TF_test.jsonl')
+
+        def normalize(x):
+            return str(x).strip()
+
+        dataset_dict = defaultdict(lambda: []) 
+
+        easy_data_list = self._load_jsonl(easy_file)
+        for data in easy_data_list:
+            c = data['id'].split('-')[0]
+            dataset_dict[c].append({
+                'query_id': data['id'],
+                'query': f"سؤال: {normalize(data['question'])}",
+                'answer': normalize(data['answer']),
+            })
+
+        return dataset_dict
+    
+    def _prepare_few_shot_prompt(self, n_shot = 5) -> Dict[str, str]:
+        if n_shot is None:
+            n_shot = 5
+        assert n_shot <= 5, ('At most 5-shot')
+
+        easy_file = os.path.join(self.benchmark_dir, 'difficulty-easy-TF_dev.jsonl')
+
+        def normalize(x):
+            return str(x).strip()
+
+        few_shot_prompt_dict = defaultdict(lambda: '')
+        count_shots = defaultdict(lambda: 0)
+
+        easy_data_list = self._load_jsonl(easy_file)
+        for data in easy_data_list:
+            c = data['id'].split('-')[0]
+            if count_shots[c] == n_shot:
+                continue
+
+            few_shot_prompt_dict[c] += (
+                f"سؤال: {normalize(data['question'])}"
+                + "\n" +"إجابة: "+f"{normalize(data['answer'])}\n\n"
+            )
+            count_shots[c] += 1
+
+        for c in self.subtasks:
+            few_shot_prompt_dict[c] += "{test_question}\nإجابة:" 
+
+        return few_shot_prompt_dict
     
 
     

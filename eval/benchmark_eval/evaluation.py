@@ -338,5 +338,64 @@ class EXAMSEvaluation(EvaluationBase):
         return aggr_metrics
     
 
+class ArabicCultureEvaluation(EvaluationBase):
+    # output: model_results_dir - benchmark_eval/results/$setting/MMCU/$model_id
+    
+    def __init__(self, 
+                 agent: Agent, 
+                 batch_size: int,
+                 setting: str='zero_shot',
+                 n_shot: int=5,
+                 accelerator: Accelerator=None):
+        
+        super(ArabicCultureEvaluation, self).__init__(agent=agent, 
+                                                batch_size=batch_size,
+                                                setting=setting,
+                                                n_shot=n_shot,
+                                                benchmark=ArabicCultureBenchmark(),
+                                                accelerator=accelerator)
+            
+        self.difficulty_levels = self.benchmark.difficulty_levels
+        self.task_types = self.benchmark.task_types
+
+    def _extract_answer(self, response: str, task_name: str) -> str:
+        """derive the required answer"""
+        def standardize_options(options):
+            return ''.join(sorted(set(options)))
+        if task_name in self.difficulty_levels['easy']:
+            res = re.search(r'نعم|لا', response.split('\n')[0].lower())
+            if res is not None:
+                res = res.group()
+            return res
+       
+    
+    def _compute_metrics(self, samples: List[dict], task_name: str):
+        responses_answer = [sample['response_answer'] for sample in samples]
+        answers = [sample['answer'] for sample in samples]
+        return {
+            'Accuracy': self.compute_acc(responses_answer, answers)
+        }
+
+    def _aggregate_metrics(self, metrics: Dict[str, Dict[str, float]], lens: Dict[str, int]) -> Dict[str, Dict[str, float]]:
+        aggr_metrics = {}
+        metric_names = list(metrics.values())[0].keys()
+
+        def aggregate(level):
+            aggr_metrics[level] = {}
+            topics = self.difficulty_levels[level]
+            for topic in topics:
+                aggr_metrics[level][topic] = metrics[topic]
+
+            aggr_metrics[level]['average'] = {}
+            aggr_metrics[level]['overall'] = {}
+            for metric_name in metric_names:
+                aggr_metrics[level]['average'][metric_name] = np.mean([metrics[topic][metric_name] for topic in topics])
+                aggr_metrics[level]['overall'][metric_name] = np.sum([lens[topic] * metrics[topic][metric_name] for topic in topics]) / np.sum([lens[topic] for topic in topics])
+
+        for level in self.difficulty_levels.keys():
+            aggregate(level)
+
+        return aggr_metrics
+
 
 
