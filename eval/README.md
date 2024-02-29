@@ -25,3 +25,10 @@ the MMLUArabic dataset, run the following script:
 
 ```sh script/MMLUArabic_few_shot_7b.sh```
 
+the ACVA dataset, run the following script:
+
+```sh script/ACVA_zero_shot_7b.sh```
+and then add results file path to `cal_acva_f1.py`
+```python cal_acva_f1.py```
+
+
